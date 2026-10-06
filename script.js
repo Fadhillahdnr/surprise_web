@@ -1,5 +1,5 @@
 const screens=[...document.querySelectorAll('.screen')];
-const show=(id)=>{screens.forEach(s=>s.classList.toggle('active',s.id===id));window.scrollTo({top:0,behavior:'smooth'});};
+const show=(id)=>{screens.forEach(s=>s.classList.toggle('active',s.id===id));document.querySelectorAll('video').forEach(v=>v.pause());window.scrollTo({top:0,behavior:'smooth'});};
 document.querySelectorAll('[data-page]').forEach(btn=>btn.addEventListener('click',()=>show(btn.dataset.page)));
 const envelope=document.getElementById('envelope'); envelope.addEventListener('click',()=>{envelope.classList.add('open');document.getElementById('message').classList.add('show');});
 const play=document.getElementById('playBtn'); let playing=false; play.addEventListener('click',()=>{playing=!playing;play.textContent=playing?'❚❚':'▶';});
