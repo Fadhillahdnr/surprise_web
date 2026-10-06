@@ -1,0 +1,14 @@
+# File khusus Docker / lokal, tidak perlu ikut ke Vercel
+Dockerfile
+docker-compose.yml
+nginx.conf
+.dockerignore
+package-lock.json
+README.md
+
+# Referensi desain, tidak dipakai website
+frames/
+contact.jpg
+
+# Audio asli (sudah dikonversi ke .m4a yang dipakai website)
+media/audio/*.mp3
