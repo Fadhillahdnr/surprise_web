@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Choose the Surprise ✨</title>
+  <meta name="description" content="A romantic interactive surprise website." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app" id="app">
+    <div class="sparkles" aria-hidden="true"></div>
+    <button class="music-btn" id="musicBtn" title="Musik">♫</button>
+
+    <main>
+      <section class="screen active" id="home">
+        <div class="hero">
+          <p class="eyebrow">A LITTLE SURPRISE FOR YOU</p>
+          <h1>Choose the Surprise</h1>
+          <p class="subtitle">Ada beberapa cerita kecil yang sengaja aku simpan untuk kamu.</p>
+          <div class="choices">
+            <button class="choice" data-page="journey"><span class="emoji">📷</span><span>Journey</span><small>our little story</small></button>
+            <button class="choice" data-page="moment"><span class="emoji">🕰️</span><span>Moment</span><small>favorite memories</small></button>
+            <button class="choice" data-page="playlist"><span class="emoji">💿</span><span>Playlist</span><small>songs for us</small></button>
+            <button class="choice" data-page="gift"><span class="emoji">🎁</span><span>Gift</span><small>one last surprise</small></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen" id="journey">
+        <button class="back" data-page="home">BACK ↩</button>
+        <div class="content-card journey-card">
+          <div class="photo-stack">
+            <div class="polaroid rotate-left"><div class="photo-placeholder">📷</div><span>first chapter</span></div>
+            <div class="polaroid rotate-right"><div class="photo-placeholder">🌹</div><span>you & me</span></div>
+          </div>
+          <div class="letter">
+            <h2>Perjalanan Kita</h2>
+            <p>Setiap ulang tahun, sayang. Di hari spesial ini, aku cuma mau bilang terima kasih karena sudah lahir ke dunia dan membuat hidupku punya banyak kebahagiaan.</p>
+            <p>Semoga hari-hari berikutnya dipenuhi hal-hal kecil yang membuatmu tersenyum. I love you so much. Kini dan nanti. ❤️</p>
+            <button class="play-note" id="noteBtn">▶ Play Note</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen" id="moment">
+        <button class="back" data-page="home">BACK ↩</button>
+        <div class="moment-wrap">
+          <h2>Our Favorite Moments</h2>
+          <div class="memory-grid">
+            <article class="memory"><div class="memory-img">🌄</div><h3>Little Adventures</h3><p>Tempat sederhana, cerita luar biasa.</p></article>
+            <article class="memory featured"><div class="memory-img">❤️</div><h3>The Moment</h3><p>Karena momen terbaik selalu terasa lebih indah kalau bersamamu.</p></article>
+            <article class="memory"><div class="memory-img">🌸</div><h3>Always Us</h3><p>Semoga koleksi kenangan kita terus bertambah.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen" id="playlist">
+        <button class="back" data-page="home">BACK ↩</button>
+        <div class="playlist-wrap">
+          <h2>Our Playlist</h2>
+          <div class="player">
+            <div class="album">♪</div>
+            <div class="track-info"><strong>Our Song</strong><span>A song that reminds me of you</span></div>
+            <button class="play" id="playBtn">▶</button>
+          </div>
+          <div class="lyrics">“Maybe the best part of my story<br>is every chapter with you.”</div>
+          <p class="hint">Tambahkan file <b>music.mp3</b> ke folder project untuk mengaktifkan musik.</p>
+        </div>
+      </section>
+
+      <section class="screen" id="gift">
+        <button class="back" data-page="home">BACK ↩</button>
+        <div class="gift-wrap">
+          <h2>Press the Envelope</h2>
+          <button class="envelope" id="envelope" aria-label="Buka surat"><span>💌</span></button>
+          <div class="message" id="message">
+            <h3>For you, always.</h3>
+            <p>Kalau suatu hari kamu lupa betapa berharganya dirimu, buka halaman ini lagi. Ada seseorang di sini yang selalu memilih kamu. ❤️</p>
+            <strong>Happy Birthday, my favorite person.</strong>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>made with love · <span>♡</span></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
