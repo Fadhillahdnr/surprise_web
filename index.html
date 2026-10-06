@@ -13,7 +13,8 @@
 <body>
   <div class="app" id="app">
     <div class="sparkles" aria-hidden="true"></div>
-    <button class="music-btn" id="musicBtn" title="Musik">♫</button>
+    <button class="music-btn" id="musicBtn" title="Musik" aria-label="Matikan backsound" aria-pressed="true">♫</button>
+    <audio id="bgm" src="media/audio/backsound.m4a" loop preload="auto"></audio>
 
     <main>
       <section class="screen active" id="home">
@@ -42,6 +43,7 @@
             <p>Setiap ulang tahun, sayang. Di hari spesial ini, aku cuma mau bilang terima kasih karena sudah lahir ke dunia dan membuat hidupku punya banyak kebahagiaan.</p>
             <p>Semoga hari-hari berikutnya dipenuhi hal-hal kecil yang membuatmu tersenyum. I love you so much. Kini dan nanti. ❤️</p>
             <button class="play-note" id="noteBtn">▶ Play Note</button>
+            <audio id="noteAudio" src="media/audio/journey.m4a" preload="metadata"></audio>
           </div>
         </div>
       </section>
