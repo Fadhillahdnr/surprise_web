@@ -1,7 +1,10 @@
 const screens=[...document.querySelectorAll('.screen')];
 const show=(id)=>{screens.forEach(s=>s.classList.toggle('active',s.id===id));syncMedia(id);window.scrollTo({top:0,behavior:'smooth'});};
 document.querySelectorAll('[data-page]').forEach(btn=>btn.addEventListener('click',()=>show(btn.dataset.page)));
-const envelope=document.getElementById('envelope'); envelope.addEventListener('click',()=>{envelope.classList.add('open');document.getElementById('message').classList.add('show');});
+const envelope=document.getElementById('envelope'); envelope.addEventListener('click',()=>{envelope.classList.add('open');const msg=document.getElementById('message');msg.classList.add('show');setTimeout(()=>window.scrollTo({top:msg.getBoundingClientRect().top+window.scrollY-20,behavior:'smooth'}),350);});
+// Paragraf surat muncul satu per satu saat di-scroll
+const revealer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');revealer.unobserve(e.target);}}),{threshold:.15,rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal').forEach(el=>revealer.observe(el));
 // Backsound: looping di semua halaman, berhenti sementara saat audio/video lain diputar
 const bgm=document.getElementById('bgm'),noteAudio=document.getElementById('noteAudio'),playlistAudio=document.getElementById('playlistAudio'),noteBtn=document.getElementById('noteBtn'),musicBtn=document.getElementById('musicBtn');
 const NOTE_START=53; let bgmOn=true;
